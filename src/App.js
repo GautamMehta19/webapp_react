@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 import Login from './components/login.component'
 import SignUp from './components/signup.component'
+import UserDetails from "./components/userDetails";
+import forgotPassword from "./components/reset"
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
               <Route path="/sign-up" element={<SignUp />} />
+              <Route path="/userDetails" element={<UserDetails />} />
             </Routes>
           </div>
         </div>
@@ -45,5 +48,25 @@ function App() {
     </Router>
   )
 }
+// function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <div className="auth-wrapper">
+//           <div className="auth-inner">
+//             <Routes>
+//               <Route exact path="/" element={<Login />} />
+//               <Route path="/sign-in" element={<Login />} />
+//               <Route path="/sign-up" element={<SignUp />} />
+//               <Route path="/userDetails" element={<UserDetails />} />
+//               <Route path="/forgot-Password" element={<forgotPassword />} />
+//             </Routes>
+//           </div>
+//         </div>
+//       </div>
+//     </Router>
+//   );
+// }
+
 
 export default App
