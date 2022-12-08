@@ -33,6 +33,9 @@ export default class SignUp extends Component {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "userRegister")
+        if(data.status == "ok"){
+          alert("sign-up succesfully")
+        }
       })
   }
   render() {
@@ -82,9 +85,9 @@ export default class SignUp extends Component {
             Sign Up
           </button>
         </div>
-        <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
-        </p>
+        {/* <p className="forgot-password text-right">
+          Already registered <a href="/log-in">log in?</a>
+        </p> */}
       </form>
     )
   }
