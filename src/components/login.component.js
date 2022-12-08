@@ -34,6 +34,9 @@ export default class Login extends Component {
           window.localStorage.setItem("token", data.data);
           window.location.href = "./userDetails";
         }
+        else{
+          alert("please check emailId or password is correct or not")
+        }
       })
   }
   render() {
